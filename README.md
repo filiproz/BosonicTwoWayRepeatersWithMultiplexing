@@ -8,9 +8,9 @@ The code includes *Matlab* simulation of the performance of the two-way repeater
 The *Matlab* code is divided into four folders:
 
 1. `SimulationPerformance` containing the code that generates the performance data, i.e. simulates the repeater error channels and error corrections.
-2. `SimulationResources' containing the code that simulates the generation of the cube resource states.
+2. `SimulationResources` containing the code that simulates the generation of the cube resource states.
 3.  `DataAnalysis` containing tools to analyse the generated data in terms of maximising secret-key/entanglement rate per mode and comparing the performance of our strategy with certain other strategies.
-4. `Data' providing most of the data used to obtain the results of the paper.
+4. `Data` providing most of the data used to obtain the results of the paper.
 
 ### Simulation Performance
 
@@ -22,7 +22,7 @@ The simulation is run through the function `SimulationRun.m` which is tailored t
 
 The main script in this section is `SimulationResources' which simulates the probability of being able to generate required number of cube resource states in a single repeater given the available number of GKP qubits.
 
-### DataAnalysis
+### Data Analysis
 
 In this folder we have tools targeting 5 tasks:
 
@@ -38,9 +38,9 @@ The folder `RankingVsPostselection` includes tools to calculate the rate of only
 
 The folder `InnerLeafInfoAndTypicalSequences` includes tools to analyse the benefits of using the inner leaf information. Specifically, the `SecretKeyVsDistArray.m` can be used to generate the rate vs distance data for a specific configuration when we do and do not use the analog information. These data can then be plotted using `PlotSecretKeyVSDistance.m`. Additionally we can also generate the data when we use the inner leaf information but use only specific typical sequences. The rates vs distance data for differently defined typical sets can be calculated using the script `SecretKeyVsDistArrayTypicalSequencesZScan.m`. Then the rates vs distance plots for these different typical sets can be plotted using `PlotSecretKeyVSDistanceTypicalSequences.m` while the probabilities of being outside the typical set using `PlotProbabilitiesOutOfTypicalSequences.m`
 
-The folder `CostFunctionOptimisation' includes the script `CostfunctionEvaluate.m' allowing to combine the performance data and the resource data in order to minimise the cost function and obtain the optimal repeater spacing, optimal resources in total and per repeater as well as the optimal rate
+The folder `CostFunctionOptimisation' includes the script `CostfunctionEvaluate.m` allowing to combine the performance data and the resource data in order to minimise the cost function and obtain the optimal repeater spacing, optimal resources in total and per repeater as well as the optimal rate
 
-Finally the folder AnalyticalModelRate has tools allowing for analytical modelling of the error rate of the inner leafs in our repeaters. The key function is `RescaleLtottoE.m' which can be used to rescale/convert the total communication distance into an error rate according to our analytical model. Additionally the error rate can also be modelled using the function `AvErrorPerRepeater.m'.
+Finally the folder AnalyticalModelRate has tools allowing for analytical modelling of the error rate of the inner leafs in our repeaters. The key function is `RescaleLtottoE.m` which can be used to rescale/convert the total communication distance into an error rate according to our analytical model. Additionally the error rate can also be modelled using the function `AvErrorPerRepeater.m`.
 
 The *Matlab* scripts make use of the following functions:
 
