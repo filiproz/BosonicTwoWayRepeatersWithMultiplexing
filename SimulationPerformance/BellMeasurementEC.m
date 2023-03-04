@@ -13,7 +13,7 @@ function [MultiqubitErrors,s] = BellMeasurementEC(quad, deltas, eta, sigGKP, eta
 %sigGKP -                   standard deviation of an ancilla GKP
 %etad -                     detector efficiency
 %ZmatrixCh -                analog information from the teleportation based
-%                           GKP corrections on the inner leafs
+%                           GKP corrections on the inner leaves
 %tableDoubleErr -           error look up table for the Steane code for single-qubit
 %                           errors
 %tableDoubleErr -           error look up table for the Steane code for two-qubit
@@ -137,7 +137,7 @@ if any(parityVector)
     %Let us describe the errors from cube creation from which we gather analog info
     %FIrstly we have the residual displacement after cube creation (CZ gate) which
     % is different for q and p. This means that the first time we do EC
-    % on the inner leafs while storing them, the distributions are
+    % on the inner leaves while storing them, the distributions are
     %slightly different due to these residual errors being different. We
     %also need to take into account the Hadamards on qubits 1-4.
     

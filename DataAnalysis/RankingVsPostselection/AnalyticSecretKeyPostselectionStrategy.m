@@ -1,6 +1,6 @@
 function SecKey = AnalyticSecretKeyPostselectionStrategy(L, v, k, Ltot)
 %This function calculcates the secret key/entanglement rate for the case
-%when the inner leafs are perfect and on the outer leafs we use
+%when the inner leaves are perfect and on the outer leaves we use
 %postselection based on the discard window $v$ rather than ranking.
 %Inputs:
 

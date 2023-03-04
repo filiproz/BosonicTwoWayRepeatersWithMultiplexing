@@ -6,7 +6,7 @@ function [SecretKeyArray,SumPZArray,SumPXArray,Lfix] = SecretKeyVsDistArrayTypic
 %Inputs
 %Zerr, Xerr -   Z and X flip probabilities for a single link
 %sTotal -       a 2-entry row vector containing probabilities of having a
-%               non-zero error syndrome on the inner leafs for the Z and X
+%               non-zero error syndrome on the inner leaves for the Z and X
 %               errors respectively
 %z -            defines the width of the typical set centred at sTotal,
 %               such that the fraction of 1's accepted in the set is

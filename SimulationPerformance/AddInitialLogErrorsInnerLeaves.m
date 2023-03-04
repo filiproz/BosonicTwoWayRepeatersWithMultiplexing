@@ -1,4 +1,4 @@
-function pdeltas = AddInitialLogErrorsInnerLeafs(pdeltas,Sampled3Sigma,Sampled2Sigma)
+function pdeltas = AddInitialLogErrorsInnerLeaves(pdeltas,Sampled3Sigma,Sampled2Sigma)
 %This function adds initial logical errors from steps b) and c) from cube
 %creation
 

@@ -4,7 +4,7 @@ function [SecretKeyArray,Lfix] = SecretKeyVsDistArray(Zerr, Xerr, sTotal, L, Lfi
 %Inputs
 %Zerr, Xerr -       Z and X flip probabilities for a single link
 %sTotal -           a 2-entry row vector containing probabilities of having a
-%                   non-zero error syndrome on the inner leafs for the Z and X
+%                   non-zero error syndrome on the inner leaves for the Z and X
 %                   errors respectively
 %L -                repeater separation
 %Lfix -             resolution of the SecretKeyArray in km

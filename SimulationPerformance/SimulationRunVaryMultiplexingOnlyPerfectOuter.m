@@ -1,14 +1,14 @@
-%This script runs the simulation of the outer leafs for perfect
+%This script runs the simulation of the outer leaves for perfect
 %parameters, i.e. perfect GKP squeezing and homodyne detection efficiency
 %where the only source of noise is the loss in the communication channel.
-%The inner leafs are perfect.
+%The inner leaves are perfect.
 % The simulation is run for a range of multiplexing levels which we vary.
 %We also specify the error thresholds which determine the maximum
 %relative error on the simulated quantities that we can tolerate.
 
 %Define the fixed repeater separation
 L=4;
-%Discard window doesn't matter as simulate only outer leafs
+%Discard window doesn't matter as simulate only outer leaves
 v = 0;
 
 %Perfect configuration
@@ -34,7 +34,7 @@ kStep = 1;
 %of X and Z errors where for each k we actually get 2 X errors and 2 Z
 %errors because in principle for each we split it into 2 depending on the no-error/error syndrome of
 %the inner leaf Steane code correction (that is why the last dimension is
-%4 not 2). As here we are running only the outer leafs, the first and the
+%4 not 2). As here we are running only the outer leaves, the first and the
 %second two columns will be the same.
 Data = ones((kRange-kStart+kStep)/kStep,kRange,4);
 
@@ -44,7 +44,7 @@ for k = kStart:kStep:kRange
     %Start with 10 samples
     N = 10;
     %Run the simulation
-    [Zerr,Xerr] = InnerAndOuterLeafs(L, sigGKP, etad, n, k, v, 0, N);
+    [Zerr,Xerr] = InnerAndOuterLeaves(L, sigGKP, etad, n, k, v, 0, N);
     %Estimate the error
     st_err_Z = sqrt( (Zerr .* (1 - Zerr))/N );
     st_err_X = sqrt( (Xerr .* (1 - Xerr))/N );
@@ -59,7 +59,7 @@ for k = kStart:kStep:kRange
         N = 10*N
         %Run the simulation. We can reuse the previous
         %runs as the 10% of the new sample.
-        [Zerr2,Xerr2] = InnerAndOuterLeafs(L, sigGKP, etad, n, k, v, 0, 0.9*N);
+        [Zerr2,Xerr2] = InnerAndOuterLeaves(L, sigGKP, etad, n, k, v, 0, 0.9*N);
         Zerr = 0.1 * Zerr + 0.9 * Zerr2;
         Xerr = 0.1 * Xerr + 0.9 * Xerr2;
         %Again error estimate

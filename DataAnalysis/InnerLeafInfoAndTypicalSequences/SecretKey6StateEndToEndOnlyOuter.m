@@ -1,6 +1,6 @@
 function out = SecretKey6StateEndToEndOnlyOuter(L, Ltot, Zerr, Xerr)
 %This function calculates the total end-to-end secret-key/entanglement rate for the scenario when
-%the inner leafs are perfect
+%the inner leaves are perfect
 
 %Inputs:
 

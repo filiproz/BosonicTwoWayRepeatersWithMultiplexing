@@ -1,7 +1,7 @@
 function []=SimulationRun(index)
 %This script/function runs the simulation for the specified amount of GKP
 %squeezing, homodyne detector efficiency, number of multiplexed links,
-%repeater separation, frequency of GKP correction on the inner leafs 
+%repeater separation, frequency of GKP correction on the inner leaves 
 %and discard window during resource state creation.
 %We also specify the error thresholds which determine the maximum
 %relative error on the simulated quantities that we can tolerate.
@@ -42,7 +42,7 @@ n = nPerkm * L;
 %Start with 10 samples
 N = 10;
 %Run the simulation
-[Zerr,Xerr, sTotal] = InnerAndOuterLeafs(L, sigGKP, etad, n, k, v, 1, N);
+[Zerr,Xerr, sTotal] = InnerAndOuterLeaves(L, sigGKP, etad, n, k, v, 1, N);
 %Estimate the error
 st_err_Z = sqrt( (Zerr .* (1 - Zerr))./[N-N*sTotal(1), N*sTotal(1)] );
 st_err_X = sqrt( (Xerr .* (1 - Xerr))./[N-N*sTotal(2), N*sTotal(2)] );
@@ -64,12 +64,12 @@ while max(rel_err_Z,[],"all") > rel_err_thr || max(rel_err_X,[],"all") > rel_err
     %the corresponding error probability for the error syndrome case
     %(2nd column of Zerr or Xerr) will be NaN so rerun everything.
     if min(sTotal,[],"all") == 0
-        [Zerr,Xerr, sTotal] = InnerAndOuterLeafs(L, sigGKP, etad, n, k, v, 1, N);
+        [Zerr,Xerr, sTotal] = InnerAndOuterLeaves(L, sigGKP, etad, n, k, v, 1, N);
     %If the probability of the inner leaf error syndrome was not zero,
     %then Zerr and Xerr from the previous run are valid and we can reuse the previous
     %runs as the 10% of the new sample.
     else
-        [Zerr2,Xerr2, sTotal2] = InnerAndOuterLeafs(L, sigGKP, etad, n, k, v, 1, 0.9*N);
+        [Zerr2,Xerr2, sTotal2] = InnerAndOuterLeaves(L, sigGKP, etad, n, k, v, 1, 0.9*N);
         Zerr = 0.1 * Zerr + 0.9 * Zerr2
         Xerr = 0.1 * Xerr + 0.9 * Xerr2
         sTotal = 0.1 * sTotal + 0.9 * sTotal2

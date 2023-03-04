@@ -1,7 +1,7 @@
 function Yield = AnalyticYieldPostselectionStrategy(p, k, NoLinks)
 %This function calculates the yield (average number of end-to-end entangled
 %pairs per protocol run) of the post-selection based protocol with
-%only outer leafs (perfect inner leafs).
+%only outer leaves (perfect inner leaves).
 
 %Inputs:
 

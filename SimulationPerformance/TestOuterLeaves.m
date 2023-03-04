@@ -1,4 +1,4 @@
-% Test OuterLeafs
+% Test OuterLeaves
 
 LPerfect = 0;
 sigGKPPerfect = 0.00001;
@@ -12,11 +12,11 @@ k = 10;
 
 
 %% Test 1: Everything perfect
-logErr = OuterLeafs(LPerfect, sigGKPPerfect, etadperfect, k, ErrProb3SigmaPerfect,ErrProb2SigmaPerfect);
+logErr = OuterLeaves(LPerfect, sigGKPPerfect, etadperfect, k, ErrProb3SigmaPerfect,ErrProb2SigmaPerfect);
 assert(all(logErr == zeros(k,2), 'all'))
 
 %% Test 2: Deterministic single qubit Z-errors and perfect channel
 %All the single qubit errors cancel since we have deterministic 4 errors
 %per GKP qubit
-logErr = OuterLeafs(LPerfect, sigGKPPerfect, etadperfect, k, ErrProb3SigmaDeterministicError, ErrProb2SigmaDeterministicError);
+logErr = OuterLeaves(LPerfect, sigGKPPerfect, etadperfect, k, ErrProb3SigmaDeterministicError, ErrProb2SigmaDeterministicError);
 assert(all(logErr == zeros(k,2), 'all'))

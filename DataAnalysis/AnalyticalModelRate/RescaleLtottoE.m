@@ -8,7 +8,7 @@ function ResFactor = RescaleLtottoE(sigGKP, etad, L, c)
 %sigGKP -       standard deviation of an ancilla GKP
 %etad -         detector efficiency
 %L -            repeater separation (distance between repeaters that generate states
-%               without counting the BSM stations for fusing outer leafs);
+%               without counting the BSM stations for fusing outer leaves);
 %c -            parameter specifying the suppression of errors of the
 %               [7,1,3]] code with analog information, taking values
 %               between 2 and 3

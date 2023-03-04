@@ -1,5 +1,5 @@
-function [logErr,s] = InnerLeafs(L, sigGKP, etad, n, ErrProb3Sigma, ErrProb2Sigma)
-%This function performs a single run of the simulation of the inner leafs
+function [logErr,s] = InnerLeaves(L, sigGKP, etad, n, ErrProb3Sigma, ErrProb2Sigma)
+%This function performs a single run of the simulation of the inner leaves
 %encoded in the concatenation of the GKP and the [[7,1,3]] code.
 %It involves storage of the qubits in the fibre with regular GKP TECs and
 %the final logical BSM between the two concatenated-coded qubits.
@@ -7,11 +7,11 @@ function [logErr,s] = InnerLeafs(L, sigGKP, etad, n, ErrProb3Sigma, ErrProb2Sigm
 %Inputs:
 
 %L -            repeater separation (distance between repeaters that generate states
-%               without counting the BSM stations for fusing outer leafs);
+%               without counting the BSM stations for fusing outer leaves);
 %sigGKP -       standard deviation of an ancilla GKP
 %etad -         detector efficiency
 %n -            number of GKP channels and GKP corrections before a logical
-%               Bell measurement on the inner leafs
+%               Bell measurement on the inner leaves
 %ErrProb3Sigma- probability of error after post-selection for the measurements
 %               in steps c), d) and e) where the accumulated GKP variance was 3*sigmaGKP^2 
 %               (this includes correlated and uncorrelated errors)
@@ -80,8 +80,8 @@ Sampled3Sigma = binornd(1,ErrProb3Sigma,46,1);
 Sampled2Sigma = binornd(1,ErrProb2Sigma,26,1);
 
 
-pdeltas1 = AddInitialLogErrorsInnerLeafs(pdeltas1,Sampled3Sigma(1:23),Sampled2Sigma(1:13));
-pdeltas2 = AddInitialLogErrorsInnerLeafs(pdeltas2,Sampled3Sigma(24:46),Sampled2Sigma(14:26));
+pdeltas1 = AddInitialLogErrorsInnerLeaves(pdeltas1,Sampled3Sigma(1:23),Sampled2Sigma(1:13));
+pdeltas2 = AddInitialLogErrorsInnerLeaves(pdeltas2,Sampled3Sigma(24:46),Sampled2Sigma(14:26));
 
 
 %Now the Hadamards on the qubits 1-4 to get to the code space of the Bell pair between

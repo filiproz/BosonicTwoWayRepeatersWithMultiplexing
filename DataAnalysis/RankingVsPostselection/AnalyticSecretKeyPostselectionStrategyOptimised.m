@@ -1,7 +1,7 @@
 function SecKeyOptimised = AnalyticSecretKeyPostselectionStrategyOptimised(L, k, Ltot)
 %This function optimises the secret key/entanglement rate over the discard
-%window $v$ in the interval [0, 2*sqrt(pi)/5] for the case when the inner leafs are perfect and on the outer
-%leafs we use post-selection.
+%window $v$ in the interval [0, 2*sqrt(pi)/5] for the case when the inner leaves are perfect and on the outer
+%leaves we use post-selection.
 %Inputs:
 
 %L -        repeater separation

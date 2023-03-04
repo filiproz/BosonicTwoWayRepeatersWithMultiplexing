@@ -1,13 +1,13 @@
-function logErr = OuterLeafs(L, sigGKP, etad, k, ErrProb3Sigma, ErrProb2Sigma)
+function logErr = OuterLeaves(L, sigGKP, etad, k, ErrProb3Sigma, ErrProb2Sigma)
 %Inputs:
 
 %L -            repeater separation (distance between repeaters that generate states
-%               without counting the BSM stations for fusing outer leafs);
+%               without counting the BSM stations for fusing outer leaves);
 %sigGKP -       standard deviation of an ancilla GKP
 %etad -         detector efficiency
 %k -            number of parallel multiplexed links
 %ErrProb3Sigma- probability of error after post-selection where the 
-%               accumulated GKP variance was 3*sigmaGKP^2; for the outer leafs 
+%               accumulated GKP variance was 3*sigmaGKP^2; for the outer leaves 
 %               this is only the measurement in step c) leading to
 %               uncorrelated errors
 %ErrProb2Sigma - probability of error after post-selection for the measurements
@@ -17,7 +17,7 @@ function logErr = OuterLeafs(L, sigGKP, etad, k, ErrProb3Sigma, ErrProb2Sigma)
 %Outputs:
 
 %logErr -       k by 2 matrix, stating whether there was a logical Zerr (first column)
-%               and Xerr (second column) on any of the k outer leafs. The
+%               and Xerr (second column) on any of the k outer leaves. The
 %               errors are arranged in the order from the most reliable to
 %               the least reliable link.
 

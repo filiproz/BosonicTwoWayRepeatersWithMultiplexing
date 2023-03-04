@@ -1,4 +1,4 @@
-% Test InnerAndOuterLeafs
+% Test InnerAndOuterLeaves
 
 LPerfect = 0;
 LHuge = 1000;
@@ -10,11 +10,11 @@ n = 4;
 k = 10;
 N = 10000;
 v = 2*sqrt(pi)/10;
-leafs = 1;
+leaves = 1;
 
 
 %% Test 1: No error case
-[Zerr,Xerr, sTotal] = InnerAndOuterLeafs(LPerfect, sigGKPPerfect, etadperfect, n, k, v, leafs, N);
+[Zerr,Xerr, sTotal] = InnerAndOuterLeaves(LPerfect, sigGKPPerfect, etadperfect, n, k, v, leaves, N);
 assert(all([Zerr(:,1),Xerr(:,1)]==zeros(k,2),'all'))
 assert(all(sTotal == [0,0]))
 
@@ -23,17 +23,17 @@ assert(all(sTotal == [0,0]))
 %channel
 %Define tolerable error
 t = 0.03;
-[Zerr,Xerr, sTotal] = InnerAndOuterLeafs(LHuge, sigGKPPerfect, etadperfect, n, k, v, leafs, N);
+[Zerr,Xerr, sTotal] = InnerAndOuterLeaves(LHuge, sigGKPPerfect, etadperfect, n, k, v, leaves, N);
 assert(all(Zerr<0.5 + t, 'all'))
 assert(all(Zerr>0.5 - t, 'all'))
 assert(all(Xerr<0.5 + t, 'all'))
 assert(all(Xerr>0.5 - t, 'all'))
-[Zerr,Xerr, sTotal] = InnerAndOuterLeafs(LHuge, sigGKPNormal, etadperfect, n, k, v, leafs, N);
+[Zerr,Xerr, sTotal] = InnerAndOuterLeaves(LHuge, sigGKPNormal, etadperfect, n, k, v, leaves, N);
 assert(all(Zerr<0.5 + t, 'all'))
 assert(all(Zerr>0.5 - t, 'all'))
 assert(all(Xerr<0.5 + t, 'all'))
 assert(all(Xerr>0.5 - t, 'all'))
-[Zerr,Xerr, sTotal] = InnerAndOuterLeafs(LHuge, sigGKPPerfect, etadnormal, n, k, v, leafs, N);
+[Zerr,Xerr, sTotal] = InnerAndOuterLeaves(LHuge, sigGKPPerfect, etadnormal, n, k, v, leaves, N);
 assert(all(Zerr<0.5 + t, 'all'))
 assert(all(Zerr>0.5 - t, 'all'))
 assert(all(Xerr<0.5 + t, 'all'))
