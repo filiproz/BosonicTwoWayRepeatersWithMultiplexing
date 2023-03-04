@@ -37,7 +37,7 @@ legend('PLOB', 'With inner leaf info', 'Without inner leaf info','location', 'no
 %Clear all the temporary variables from the workspace
 clear ('i', 'Lfix', 'Lmax', 'Ltot', 'PLOB', 'v', 'vvalue', 'wvar', 'X', 'ax')
 
-title('Rate R vs distance, $\sigma_{GKP}=0.14$, $\eta_d = 0.98$, $L = 0.5$ km','Interpreter','latex')
+title('Rate R vs distance, $\sigma_{\textrm{GKP}}=0.14$, $\eta_d = 0.98$, $L = 0.5$ km','Interpreter','latex')
 
-xlabel('Distance $L_{tot}$ (km)', 'Interpreter','latex')
+xlabel('Distance $L_{\textrm{tot}}$ (km)', 'Interpreter','latex')
 ylabel('Rate $R$', 'Interpreter','latex')

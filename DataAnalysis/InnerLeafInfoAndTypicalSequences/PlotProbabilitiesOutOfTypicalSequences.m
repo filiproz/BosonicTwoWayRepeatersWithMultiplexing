@@ -40,6 +40,6 @@ legend('$z = 0$', '$z = 0.01$', '$z = 0.02$', '$z = 0.03$', '$z = 0.04$', 'Inter
 %Clear all the temporary variables from the workspace
 clear ('i', 'Lfix', 'Lmax', 'Ltot', 'v', 'vvalue', 'wvar', 'X', 'ax')
 
-title('Probability outside typical set vs distance, $\sigma_{GKP}=0.12$, $\eta_d = 0.96$, $L=0.5$ ','Interpreter','latex')
-xlabel('Distance $L_{tot}$ (km)','Interpreter','latex')
+title('Probability outside typical set vs distance, $\sigma_{\textrm{GKP}}=0.12$, $\eta_d = 0.96$, $L=0.5$ ','Interpreter','latex')
+xlabel('Distance $L_{\textrm{tot}}$ (km)','Interpreter','latex')
 ylabel('Probability','Interpreter','latex')

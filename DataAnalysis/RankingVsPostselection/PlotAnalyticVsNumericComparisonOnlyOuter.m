@@ -52,8 +52,8 @@ grid on
 ax = gca;
 ax.GridAlpha = 1;
 supersizeme(+5.5)
-title("Rate $R$ vs multiplexing $k$, outer leaves, $L_{tot}=$" + rats(Ltot)+ " km, $L=$" + rats(L) + " km",'Interpreter','latex')
-xlabel('No of multiplexed links $k$','Interpreter','latex')
+title("Rate $R$ vs multiplexing $k$, outer leaves, $L_{\textrm{tot}}=$" + rats(Ltot)+ " km, $L=$" + rats(L) + " km",'Interpreter','latex')
+xlabel('No. of multiplexed links $k$','Interpreter','latex')
 ylabel('Rate $R$','Interpreter','latex')
 set(gcf, 'Position', get(0, 'Screensize'));
 legend("Ranking strategy", "Postselecton strategy", "Location", "southeast")

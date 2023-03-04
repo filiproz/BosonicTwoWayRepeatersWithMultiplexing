@@ -22,10 +22,10 @@ set(gca, 'XScale', 'log')
 set(gca, 'YScale', 'log')
 supersizeme(+5.5)
 
-legend('$\sigma_{GKP} = 0.13, \eta_d = 0.98$','$\sigma_{GKP} = 0.12, \eta_d = 0.98$','$\sigma_{GKP} = 0.13, \eta_d = 0.99$', 'Interpreter', 'latex', 'location', 'northwest')
+legend('$\sigma_{\textrm{GKP}} = 0.13, \eta_d = 0.98$','$\sigma_{\textrm{GKP}} = 0.12, \eta_d = 0.98$','$\sigma_{\textrm{GKP}} = 0.13, \eta_d = 0.99$', 'Interpreter', 'latex', 'location', 'northwest')
 
 
 title('Resources per repeater vs distance','Interpreter','latex')
 
-xlabel('Distance $L_{tot}$ (km)','Interpreter','latex')
+xlabel('Distance $L_{\textrm{tot}}$ (km)','Interpreter','latex')
 ylabel('Resources per repeater','Interpreter','latex')

@@ -22,9 +22,9 @@ set(gca, 'XScale', 'log')
 
 supersizeme(+5.5)
 
-legend('$\sigma_{GKP} = 0.13, \eta_d = 0.98$','$\sigma_{GKP} = 0.12, \eta_d = 0.98$','$\sigma_{GKP} = 0.13, \eta_d = 0.99$', 'Interpreter', 'latex', 'location', 'southwest')
+legend('$\sigma_{\textrm{GKP}} = 0.13, \eta_d = 0.98$','$\sigma_{\textrm{GKP}} = 0.12, \eta_d = 0.98$','$\sigma_{\textrm{GKP}} = 0.13, \eta_d = 0.99$', 'Interpreter', 'latex', 'location', 'southwest')
 
 title('Optimal repeater spacing $L$ vs distance','Interpreter','latex')
 
-xlabel('Distance $L_{tot}$ (km)','Interpreter','latex')
+xlabel('Distance $L_{\textrm{tot}}$ (km)','Interpreter','latex')
 ylabel('Repeater spacing $L$','Interpreter','latex')

@@ -30,7 +30,7 @@ if leaves == 0
         Zerr = Zerr(1:k,:);
         Xerr = squeeze(Data(k, :, 3:4));
         Xerr = Xerr(1:k,:);
-        SecretKey(k) = SecretKey6StateEndToEndNoInnerLeafInfo(L, Ltot, Zerr, Xerr);
+        SecretKey(k) = SecretKey6StateEndToEndOnlyOuter(L, Ltot, Zerr, Xerr);
     end
 else
     for k = 1:kRange

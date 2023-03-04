@@ -42,6 +42,6 @@ legend('PLOB', '$z = 0$', '$z = 0.01$', '$z = 0.02$', '$z = 0.03$', '$z = 0.04$'
 %Clear all the temporary variables from the workspace
 clear ('i', 'Lfix', 'Lmax', 'Ltot', 'PLOB', 'v', 'vvalue', 'wvar', 'X', 'ax', 'Lfix2', 'Y')
 
-title('Rate $R$ vs distance for different typical sets, $\sigma_{GKP}=0.12$, $\eta_d = 0.96$, $L=0.5$','Interpreter','latex')
-xlabel('Distance $L_{tot}$ (km)', 'Interpreter','latex')
+title('Rate $R$ vs distance for different typical sets, $\sigma_{\textrm{GKP}}=0.12$, $\eta_d = 0.96$, $L=0.5$','Interpreter','latex')
+xlabel('Distance $L_{\textrm{tot}}$ (km)', 'Interpreter','latex')
 ylabel('Rate $R$', 'Interpreter','latex')
