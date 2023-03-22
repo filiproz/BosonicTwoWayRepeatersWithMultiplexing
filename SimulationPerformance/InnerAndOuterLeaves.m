@@ -1,5 +1,5 @@
 function [Zerr,Xerr, sTotal] = InnerAndOuterLeaves(L, sigGKP, etad, n, k, v, leaves, N)
-%This function calculates the performance of a single elementary link in
+%This function calculates the performance over a single elementary segment in
 %the two-way repeater architecture with inner leaf qubits encoded in the
 %concatenated GKP + Steane code while the outer leaves being just GKP
 %qubits.
@@ -15,7 +15,7 @@ function [Zerr,Xerr, sTotal] = InnerAndOuterLeaves(L, sigGKP, etad, n, k, v, lea
 %k -        number of multiplexed parallel links
 %v -        size of the discard window during steps b and c of the cube state
 %           preparation
-%leaves -    this parameter specifies whether we run the simulation of both
+%leaves -    this parameter specifiles whether we run the simulation of both
 %           inner and outer leaves, only outer or only inner.
 %           0 - only outer leaves
 %           1 - full scheme
