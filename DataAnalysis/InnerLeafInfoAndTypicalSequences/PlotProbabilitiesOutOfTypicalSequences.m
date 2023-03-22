@@ -29,14 +29,13 @@ for v = 1:numel(wvar)
     vvalue = eval(wvar{v});  
     plot(X(1:size(vvalue,2)), vvalue, 'LineWidth', 4,'LineStyle','--')
 end
-ylim([10^(-14), 1])
 grid on
 ax = gca;
 ax.GridAlpha = 1;
 set(gca, 'YScale', 'log')
 supersizeme(+4.5)
 
-legend('$z = 0$', '$z = 0.01$', '$z = 0.02$', '$z = 0.03$', '$z = 0.04$', 'Interpreter','latex','location', 'northeast')
+legend('$z = 0$', '$z = 0.01$', '$z = 0.02$', '$z = 0.03$', 'Interpreter','latex','location', 'northeast')
 %Clear all the temporary variables from the workspace
 clear ('i', 'Lfix', 'Lmax', 'Ltot', 'v', 'vvalue', 'wvar', 'X', 'ax')
 

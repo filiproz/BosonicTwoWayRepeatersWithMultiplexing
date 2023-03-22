@@ -9,6 +9,7 @@ wvar = who;
 
 Lmax = 10000;
 Lfix = 50;
+Lfix2 = 1;
 
 X = zeros(1, Lmax/Lfix);
 for i = 1:Lmax/Lfix
@@ -16,10 +17,17 @@ for i = 1:Lmax/Lfix
     X(i) = Ltot;
 end
 
+Y = zeros(1, Lmax/Lfix2);
+for i = 1:Lmax/Lfix2
+    Ltot = i * Lfix2;
+    Y(i) = Ltot;
+end
+Y = Y(1,Lfix/Lfix2:end);
+
 %Plot PLOB bound
-PLOB = -log2(1-exp(-vpa(X/22)));
+PLOB = -log2(1-exp(-vpa(Y/22)));
 figure
-plot(X,PLOB,'LineWidth', 7,'LineStyle',':','DisplayName', 'PLOB')
+plot(Y,PLOB,'LineWidth', 7,'LineStyle',':','DisplayName', 'PLOB')
 hold all
 
 %Plot all the rate arrays
@@ -38,7 +46,7 @@ supersizeme(+4.5)
 legend('PLOB','$L=0.5$ km','$L=1$ km', '$L=2$ km', '$L=2.5$ km', '$L=5$ km', 'Interpreter', 'latex', 'location', 'northeast')
 
 %Clear all the temporary variables from the workspace
-clear ('i', 'Lfix', 'Lmax', 'Ltot', 'PLOB', 'v', 'vvalue', 'wvar', 'X', 'ax')
+clear ('i', 'Lfix', 'Lfix2', 'Lmax', 'Ltot', 'PLOB', 'v', 'vvalue', 'wvar', 'X', 'Y', 'ax')
 
 title('Rate $R$ vs distance, $\sigma_{\textrm{GKP}}=0.13$, $\eta_d = 0.99$ ','Interpreter','latex')
 %title('Rate $R$ vs distance','Interpreter','latex')

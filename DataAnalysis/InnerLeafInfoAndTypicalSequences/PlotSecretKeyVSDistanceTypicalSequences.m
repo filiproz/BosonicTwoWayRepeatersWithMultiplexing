@@ -32,13 +32,14 @@ for v = 1:numel(wvar)-1
    plot(X(1:size(vvalue,2)), vvalue, 'LineWidth', 4,'LineStyle','--')
 end
 plot(Y(1:size(SecretKeyArray,2)), SecretKeyArray, 'LineWidth', 7)
-ylim([0. 1])
+ylim([10^(-40) 1])
+xlim([0. 1500])
 grid on
 ax = gca;
 ax.GridAlpha = 1;   
 set(gca, 'YScale', 'log')
 supersizeme(+4.5)
-legend('PLOB', '$z = 0$', '$z = 0.01$', '$z = 0.02$', '$z = 0.03$', '$z = 0.04$', 'All sequences', 'Interpreter','latex','location', 'northeast')
+legend('PLOB', '$z = 0$', '$z = 0.01$', '$z = 0.02$', '$z = 0.03$', 'All sequences', 'Interpreter','latex','location', 'northeast')
 %Clear all the temporary variables from the workspace
 clear ('i', 'Lfix', 'Lmax', 'Ltot', 'PLOB', 'v', 'vvalue', 'wvar', 'X', 'ax', 'Lfix2', 'Y')
 

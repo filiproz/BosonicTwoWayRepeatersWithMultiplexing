@@ -26,7 +26,8 @@ hold all
 plot(X(1:size(SecretKeyArray,2)), SecretKeyArray, 'LineWidth', 7)
 plot(X(1:size(SecretKeyArrayNoInnerLeafInfo,2)), SecretKeyArrayNoInnerLeafInfo, 'LineWidth', 7)
 
-ylim([0. 1])
+ylim([10^(-40) 1])
+xlim([0. 1500])
 grid on
 ax = gca;
 ax.GridAlpha = 1;
