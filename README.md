@@ -1,6 +1,6 @@
 # BosonicTwoWayRepeatersWithMultiplexing
 
-This is the code used to generate the data and plots for the article ....
+This is the code used to generate the data and plots for the article available on arXiv at: arXiv:2303.14923.
 
 ## Content
 The code includes *Matlab* simulation of the performance of the two-way repeater architecture with multiplexing based on the concatenation of the GKP code with the [[7,1,3]] code.
